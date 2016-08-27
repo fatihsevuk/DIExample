@@ -10,9 +10,11 @@ public class BilgisayarTest {
 		
 		ApplicationContext context=new ClassPathXmlApplicationContext("test/app-config.xml");
 		
-		Bilgisayar bilgisayar=context.getBean("bilgId",Bilgisayar.class);
+		
+		Bilgisayar bilgisayar=context.getBean("comp3Id",Bilgisayar.class);
 		
 		System.out.println(bilgisayar);
+	
 		
 		((ClassPathXmlApplicationContext) context).close();
 		

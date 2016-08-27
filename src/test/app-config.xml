@@ -2,10 +2,31 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd"
+        xmlns:c="http://www.springframework.org/schema/c"
+        >
 
-	<bean id="bilgId" class="model.Bilgisayar">
-		<property name="marka" value="asus"></property>
-		<property name="fiyat" value="3000"></property>
-	</bean>
+	<bean id="bilgId" class="model.Bilgisayar" name="comp1Id,comp2Id">
+		
+		<!-- c:marka="leonova"
+		c:fiyat="1250" -->
+	
+		<!-- <property name="marka" value="asus"></property>
+		<property name="fiyat" value="3000"></property> -->
+	
+	<!-- <constructor-arg value="casper" />
+	<constructor-arg value="2500" />	 -->
+	
+	<constructor-arg>
+			<value>hp</value>
+	</constructor-arg>
+	
+	<constructor-arg>
+			<value>1500</value>
+	</constructor-arg>
+	
+	
+	</bean> 
+	
+	<alias name="bilgId" alias="comp3Id"/>
 </beans>

@@ -4,6 +4,18 @@ public class Bilgisayar {
 	
 	private String marka;
 	private String fiyat;
+	
+	public Bilgisayar() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Bilgisayar(String marka , String fiyat){
+
+		  this.marka=marka;
+		  this.fiyat=fiyat;
+		}
+	
+	
 	public String getMarka() {
 		return marka;
 	}
